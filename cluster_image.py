@@ -7,7 +7,6 @@ import random
 
 def cluster_images(encodings, img_paths):
     """
-
     :param encodings: list of encodings
     :param img_paths: list of image paths
     :return: dict containing encodings and images that are needed to be sent to server
@@ -29,7 +28,8 @@ def cluster_images(encodings, img_paths):
                 rand_ind = random.choice(idxs)
                 face_dict[label_id] = {"encodings": [encodings[rand_ind]],
                                        "image_path": [img_paths[rand_ind]]}
-            # loop over the sampled indexes
+
+
         return face_dict
     # for error logs
 
